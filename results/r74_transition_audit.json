@@ -1,0 +1,540 @@
+{
+  "status": "PASS",
+  "purpose": "development-only; synthetic previously explored; NOT confirmatory",
+  "seed": 42,
+  "local_steps": 100,
+  "coordinator_steps": 180,
+  "train_sha256": "256821a6bb5186ee3d8c8da10d3c208c5d599ca08f644ae9ea3aee0314f4bfa5",
+  "tests": [
+    {
+      "name": "reward_normal_terminal",
+      "pass": true,
+      "actual": 9,
+      "expected": 9,
+      "detail": ""
+    },
+    {
+      "name": "reward_attack_missed",
+      "pass": true,
+      "actual": -24,
+      "expected": -24,
+      "detail": ""
+    },
+    {
+      "name": "reward_normal_false_alert",
+      "pass": true,
+      "actual": -32,
+      "expected": -32,
+      "detail": ""
+    },
+    {
+      "name": "reward_attack_premature_alert",
+      "pass": true,
+      "actual": -32,
+      "expected": -32,
+      "detail": ""
+    },
+    {
+      "name": "reward_attack_onset_alert",
+      "pass": true,
+      "actual": 18.0,
+      "expected": 18,
+      "detail": ""
+    },
+    {
+      "name": "reward_attack_delayed_alert",
+      "pass": true,
+      "actual": 16.6,
+      "expected": 16.6,
+      "detail": ""
+    },
+    {
+      "name": "reward_normal_wait",
+      "pass": true,
+      "actual": -0.08,
+      "expected": -0.08,
+      "detail": ""
+    },
+    {
+      "name": "inspection_immediate_reward",
+      "pass": true,
+      "actual": -0.8,
+      "expected": -0.8,
+      "detail": "inspection is an explicit action separate from alert"
+    },
+    {
+      "name": "TD_terminal_positive",
+      "pass": true,
+      "actual": 2.34,
+      "expected": 2.34,
+      "detail": ""
+    },
+    {
+      "name": "TD_terminal_negative",
+      "pass": true,
+      "actual": -4.16,
+      "expected": -4.16,
+      "detail": ""
+    },
+    {
+      "name": "TD_bootstrap_positive",
+      "pass": true,
+      "actual": 2.3406,
+      "expected": 2.3406,
+      "detail": ""
+    },
+    {
+      "name": "TD_bootstrap_negative",
+      "pass": true,
+      "actual": -1.4628,
+      "expected": -1.4628,
+      "detail": ""
+    },
+    {
+      "name": "tie_wait",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "known_alert_beats_unseen",
+      "pass": true,
+      "actual": 2,
+      "expected": 2,
+      "detail": ""
+    },
+    {
+      "name": "unknown_zero_can_beat_negative_known",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": "structural risk: missing action Q defaults to zero"
+    },
+    {
+      "name": "central_trace_matches_engine",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "central_action_count_equals_decisions",
+      "pass": true,
+      "actual": 744,
+      "expected": 744,
+      "detail": ""
+    },
+    {
+      "name": "four_q_trace_matches_engine",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "four_q_action_count_equals_decisions",
+      "pass": true,
+      "actual": 651,
+      "expected": 651,
+      "detail": ""
+    },
+    {
+      "name": "no_phy_trace_matches_engine",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "no_phy_action_count_equals_decisions",
+      "pass": true,
+      "actual": 735,
+      "expected": 735,
+      "detail": ""
+    },
+    {
+      "name": "no_protocol_trace_matches_engine",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "no_protocol_action_count_equals_decisions",
+      "pass": true,
+      "actual": 834,
+      "expected": 834,
+      "detail": ""
+    },
+    {
+      "name": "permuted_q_trace_matches_engine",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "permuted_q_action_count_equals_decisions",
+      "pass": true,
+      "actual": 647,
+      "expected": 647,
+      "detail": ""
+    }
+  ],
+  "variants": [
+    {
+      "seed": 42,
+      "variant": "central",
+      "selected_step": 180,
+      "actions": {
+        "wait": 689,
+        "inspect": 24,
+        "alert": 31
+      },
+      "state_action_coverage": {
+        "pre_total": 720,
+        "pre_all_known": 611,
+        "pre_any_known": 710,
+        "post_total": 24,
+        "post_all_known": 0,
+        "post_any_known": 4
+      },
+      "selection": {
+        "all_unknown": 30,
+        "some_unknown": 103,
+        "all_known": 611,
+        "tie": 30,
+        "unseen_chosen": 64,
+        "known_chosen": 680
+      },
+      "reward_by_outcome": {
+        "true_alert": {
+          "count": 23,
+          "mean_terminal_reward": 15.610869565217392
+        },
+        "false_alert": {
+          "count": 8,
+          "mean_terminal_reward": -32.0
+        },
+        "premature_alert": {
+          "count": 0,
+          "mean_terminal_reward": null
+        },
+        "correct_normal_terminal": {
+          "count": 2,
+          "mean_terminal_reward": 9.0
+        },
+        "missed_attack_terminal": {
+          "count": 7,
+          "mean_terminal_reward": -24.0
+        }
+      },
+      "inspection_transitions": 24,
+      "post_inspection_wait_resets_inspection": 20,
+      "trajectory_mismatch": 0,
+      "validation_metrics": {
+        "mcc": -0.03456505649101418,
+        "bal_acc": 0.4833333333333334,
+        "f1": 0.7540983606557377,
+        "recall": 0.7666666666666667,
+        "fpr": 0.8,
+        "premature_rate": 0.0,
+        "tp": 23,
+        "tn": 2,
+        "fp": 8,
+        "fn": 7,
+        "delay_messages": 6.826086956521739,
+        "inspections": 0.6,
+        "mean_reward": -3.0137500000000004
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "four_q",
+      "selected_step": 180,
+      "actions": {
+        "wait": 585,
+        "inspect": 33,
+        "alert": 33
+      },
+      "state_action_coverage": {
+        "pre_total": 618,
+        "pre_all_known": 614,
+        "pre_any_known": 618,
+        "post_total": 33,
+        "post_all_known": 2,
+        "post_any_known": 10
+      },
+      "selection": {
+        "all_unknown": 23,
+        "some_unknown": 12,
+        "all_known": 616,
+        "tie": 23,
+        "unseen_chosen": 33,
+        "known_chosen": 618
+      },
+      "reward_by_outcome": {
+        "true_alert": {
+          "count": 25,
+          "mean_terminal_reward": 16.502
+        },
+        "false_alert": {
+          "count": 8,
+          "mean_terminal_reward": -32.0
+        },
+        "premature_alert": {
+          "count": 0,
+          "mean_terminal_reward": null
+        },
+        "correct_normal_terminal": {
+          "count": 2,
+          "mean_terminal_reward": 9.0
+        },
+        "missed_attack_terminal": {
+          "count": 5,
+          "mean_terminal_reward": -24.0
+        }
+      },
+      "inspection_transitions": 33,
+      "post_inspection_wait_resets_inspection": 25,
+      "trajectory_mismatch": 0,
+      "validation_metrics": {
+        "mcc": 0.037986858819879316,
+        "bal_acc": 0.5166666666666667,
+        "f1": 0.7936507936507936,
+        "recall": 0.8333333333333334,
+        "fpr": 0.8,
+        "premature_rate": 0.0,
+        "tp": 25,
+        "tn": 2,
+        "fp": 8,
+        "fn": 5,
+        "delay_messages": 4.28,
+        "inspections": 0.825,
+        "mean_reward": -0.45224999999999954
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "no_phy",
+      "selected_step": 180,
+      "actions": {
+        "wait": 655,
+        "inspect": 40,
+        "alert": 40
+      },
+      "state_action_coverage": {
+        "pre_total": 695,
+        "pre_all_known": 683,
+        "pre_any_known": 692,
+        "post_total": 40,
+        "post_all_known": 39,
+        "post_any_known": 39
+      },
+      "selection": {
+        "all_unknown": 4,
+        "some_unknown": 9,
+        "all_known": 722,
+        "tie": 4,
+        "unseen_chosen": 5,
+        "known_chosen": 730
+      },
+      "reward_by_outcome": {
+        "true_alert": {
+          "count": 30,
+          "mean_terminal_reward": 15.293333333333333
+        },
+        "false_alert": {
+          "count": 10,
+          "mean_terminal_reward": -32.0
+        },
+        "premature_alert": {
+          "count": 0,
+          "mean_terminal_reward": null
+        },
+        "correct_normal_terminal": {
+          "count": 0,
+          "mean_terminal_reward": null
+        },
+        "missed_attack_terminal": {
+          "count": 0,
+          "mean_terminal_reward": null
+        }
+      },
+      "inspection_transitions": 40,
+      "post_inspection_wait_resets_inspection": 40,
+      "trajectory_mismatch": 0,
+      "validation_metrics": {
+        "mcc": 0.0,
+        "bal_acc": 0.5,
+        "f1": 0.8571428571428571,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "premature_rate": 0.0,
+        "tp": 30,
+        "tn": 0,
+        "fp": 10,
+        "fn": 0,
+        "delay_messages": 7.733333333333333,
+        "inspections": 1.0,
+        "mean_reward": 1.359999999999999
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "no_protocol",
+      "selected_step": 180,
+      "actions": {
+        "wait": 780,
+        "inspect": 39,
+        "alert": 15
+      },
+      "state_action_coverage": {
+        "pre_total": 795,
+        "pre_all_known": 786,
+        "pre_any_known": 794,
+        "post_total": 39,
+        "post_all_known": 11,
+        "post_any_known": 24
+      },
+      "selection": {
+        "all_unknown": 16,
+        "some_unknown": 21,
+        "all_known": 797,
+        "tie": 16,
+        "unseen_chosen": 28,
+        "known_chosen": 806
+      },
+      "reward_by_outcome": {
+        "true_alert": {
+          "count": 13,
+          "mean_terminal_reward": 16.734615384615385
+        },
+        "false_alert": {
+          "count": 2,
+          "mean_terminal_reward": -32.0
+        },
+        "premature_alert": {
+          "count": 0,
+          "mean_terminal_reward": null
+        },
+        "correct_normal_terminal": {
+          "count": 8,
+          "mean_terminal_reward": 9.0
+        },
+        "missed_attack_terminal": {
+          "count": 17,
+          "mean_terminal_reward": -24.0
+        }
+      },
+      "inspection_transitions": 39,
+      "post_inspection_wait_resets_inspection": 28,
+      "trajectory_mismatch": 0,
+      "validation_metrics": {
+        "mcc": 0.20869967789998037,
+        "bal_acc": 0.6166666666666667,
+        "f1": 0.5777777777777777,
+        "recall": 0.43333333333333335,
+        "fpr": 0.2,
+        "premature_rate": 0.0,
+        "tp": 13,
+        "tn": 8,
+        "fp": 2,
+        "fn": 17,
+        "delay_messages": 3.6153846153846154,
+        "inspections": 0.975,
+        "mean_reward": -6.8512499999999985
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "permuted_q",
+      "selected_step": 100,
+      "actions": {
+        "wait": 589,
+        "inspect": 26,
+        "alert": 32
+      },
+      "state_action_coverage": {
+        "pre_total": 621,
+        "pre_all_known": 498,
+        "pre_any_known": 530,
+        "post_total": 26,
+        "post_all_known": 6,
+        "post_any_known": 6
+      },
+      "selection": {
+        "all_unknown": 111,
+        "some_unknown": 32,
+        "all_known": 504,
+        "tie": 112,
+        "unseen_chosen": 132,
+        "known_chosen": 515
+      },
+      "reward_by_outcome": {
+        "true_alert": {
+          "count": 26,
+          "mean_terminal_reward": 16.505769230769232
+        },
+        "false_alert": {
+          "count": 6,
+          "mean_terminal_reward": -32.0
+        },
+        "premature_alert": {
+          "count": 0,
+          "mean_terminal_reward": null
+        },
+        "correct_normal_terminal": {
+          "count": 4,
+          "mean_terminal_reward": 9.0
+        },
+        "missed_attack_terminal": {
+          "count": 4,
+          "mean_terminal_reward": -24.0
+        }
+      },
+      "inspection_transitions": 26,
+      "post_inspection_wait_resets_inspection": 26,
+      "trajectory_mismatch": 0,
+      "validation_metrics": {
+        "mcc": 0.28867513459481287,
+        "bal_acc": 0.6333333333333333,
+        "f1": 0.8387096774193549,
+        "recall": 0.8666666666666667,
+        "fpr": 0.6,
+        "premature_rate": 0.0,
+        "tp": 26,
+        "tn": 4,
+        "fp": 6,
+        "fn": 4,
+        "delay_messages": 4.269230769230769,
+        "inspections": 0.65,
+        "mean_reward": 2.7467500000000014
+      }
+    }
+  ],
+  "warnings": [
+    "central: 64 decisions selected unlearned Q values",
+    "central: 20 post-inspection waits reset inspection state; verify intended semantics",
+    "four_q: 33 decisions selected unlearned Q values",
+    "four_q: 25 post-inspection waits reset inspection state; verify intended semantics",
+    "no_phy: 5 decisions selected unlearned Q values",
+    "no_phy: 40 post-inspection waits reset inspection state; verify intended semantics",
+    "no_protocol: 28 decisions selected unlearned Q values",
+    "no_protocol: 28 post-inspection waits reset inspection state; verify intended semantics",
+    "permuted_q: 132 decisions selected unlearned Q values",
+    "permuted_q: 26 post-inspection waits reset inspection state; verify intended semantics"
+  ],
+  "limitations": [
+    "The per-step bootstrap targets are reconstructed from the frozen selected policy, not the original historical training Q table; they are counterfactual update diagnostics, NOT training-time TD logs.",
+    "Terminal reward tests use hand-computable cases; training dynamics and reward preference require further analysis.",
+    "Only validation episodes are traced; no test-set optimization.",
+    "Exploration in training is not instrumented; greedy action selection and transitions are independently traced.",
+    "No architecture or reward weights changed in E3-R74."
+  ],
+  "test_counts": {
+    "passed": 25,
+    "total": 25
+  }
+}

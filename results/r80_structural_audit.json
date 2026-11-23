@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "purpose": "E3-R80.1 corrected episode classification with aggregate consistency assertions; development only",
+  "seeds": [
+    42,
+    123
+  ],
+  "condition": "persist_inspection",
+  "local_steps": 100,
+  "coordinator_steps": 180,
+  "architectures": [
+    "central",
+    "four_q",
+    "no_phy",
+    "no_protocol"
+  ],
+  "validation_episodes": 40,
+  "confusion_consistency": "PASS",
+  "counts": {
+    "configurations": 8,
+    "episode_predictions": 320,
+    "coverage_rows": 40,
+    "counterfactuals": 8
+  },
+  "train_sha256": "256821a6bb5186ee3d8c8da10d3c208c5d599ca08f644ae9ea3aee0314f4bfa5",
+  "source_sha256": "207038b493bca884f7330456ddba9437614c22167b4936bf35bdc97b19f4ee77",
+  "limitations": [
+    "Engine imports and preprocesses historical test.csv.gz at initialization, although R80 evaluates only va: remove test ingestion for a future clean confirmatory pipeline",
+    "The validation split has been used repeatedly for development and is not independent",
+    "Counterfactual neutralization uses unchanged trained Q and is not equivalent to retraining an ablated specialist",
+    "Specialist bin counts are descriptive, not mutual information or causal attribution",
+    "No capacity/CPU matching",
+    "No externally labeled independent attacks",
+    "Fixed final checkpoints; not directly comparable to R76 validation-selected checkpoints"
+  ]
+}

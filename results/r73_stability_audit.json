@@ -1,0 +1,296 @@
+{
+  "status": "PASS",
+  "purpose": "development-only stability and reward audit; synthetic previously explored; NOT confirmatory",
+  "dataset_sha256": "256821a6bb5186ee3d8c8da10d3c208c5d599ca08f644ae9ea3aee0314f4bfa5",
+  "seeds": [
+    42
+  ],
+  "local_steps": 100,
+  "coordinator_steps": 180,
+  "reward_definition": {
+    "true_alert_after_onset": "18 - 0.35 * delay",
+    "false_or_premature_alert": -32,
+    "correct_no_alert_terminal": 9,
+    "missed_attack_terminal": -24,
+    "wait_per_step": -0.08,
+    "inspection": -0.8
+  },
+  "variants": [
+    {
+      "seed": 42,
+      "variant": "central",
+      "selected_step": 180,
+      "policy_entries": 238,
+      "validation_metrics": {
+        "mcc": -0.03456505649101418,
+        "bal_acc": 0.4833333333333334,
+        "f1": 0.7540983606557377,
+        "recall": 0.7666666666666667,
+        "fpr": 0.8,
+        "premature_rate": 0.0,
+        "tp": 23,
+        "tn": 2,
+        "fp": 8,
+        "fn": 7,
+        "delay_messages": 6.826086956521739,
+        "inspections": 0.6,
+        "mean_reward": -3.0137500000000004
+      },
+      "action_counts": {
+        "wait": 689,
+        "inspect": 24,
+        "alert": 31,
+        "pre_known": 710,
+        "pre_total": 720,
+        "post_known": 4,
+        "post_total": 24,
+        "post_both_known": 0,
+        "post_alert_chosen": 4,
+        "post_wait_chosen": 20,
+        "terminal_no_alert": 9
+      },
+      "validation_curve": [
+        {
+          "step": 100,
+          "score": -0.20396057645963794,
+          "mcc": -0.11396057645963793,
+          "fpr": 0.9
+        },
+        {
+          "step": 180,
+          "score": -0.1145650564910142,
+          "mcc": -0.03456505649101418,
+          "fpr": 0.8
+        }
+      ],
+      "permutation_map_present": null
+    },
+    {
+      "seed": 42,
+      "variant": "four_q",
+      "selected_step": 180,
+      "policy_entries": 128,
+      "validation_metrics": {
+        "mcc": 0.037986858819879316,
+        "bal_acc": 0.5166666666666667,
+        "f1": 0.7936507936507936,
+        "recall": 0.8333333333333334,
+        "fpr": 0.8,
+        "premature_rate": 0.0,
+        "tp": 25,
+        "tn": 2,
+        "fp": 8,
+        "fn": 5,
+        "delay_messages": 4.28,
+        "inspections": 0.825,
+        "mean_reward": -0.45224999999999954
+      },
+      "action_counts": {
+        "wait": 585,
+        "inspect": 33,
+        "alert": 33,
+        "pre_known": 618,
+        "pre_total": 618,
+        "post_known": 10,
+        "post_total": 33,
+        "post_both_known": 2,
+        "post_alert_chosen": 8,
+        "post_wait_chosen": 25,
+        "terminal_no_alert": 7
+      },
+      "validation_curve": [
+        {
+          "step": 100,
+          "score": -0.49365927286816175,
+          "mcc": -0.42365927286816174,
+          "fpr": 0.7
+        },
+        {
+          "step": 180,
+          "score": -0.0420131411801207,
+          "mcc": 0.037986858819879316,
+          "fpr": 0.8
+        }
+      ],
+      "permutation_map_present": null
+    },
+    {
+      "seed": 42,
+      "variant": "no_phy",
+      "selected_step": 180,
+      "policy_entries": 108,
+      "validation_metrics": {
+        "mcc": 0.0,
+        "bal_acc": 0.5,
+        "f1": 0.8571428571428571,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "premature_rate": 0.0,
+        "tp": 30,
+        "tn": 0,
+        "fp": 10,
+        "fn": 0,
+        "delay_messages": 7.733333333333333,
+        "inspections": 1.0,
+        "mean_reward": 1.359999999999999
+      },
+      "action_counts": {
+        "wait": 655,
+        "inspect": 40,
+        "alert": 40,
+        "pre_known": 692,
+        "pre_total": 695,
+        "post_known": 39,
+        "post_total": 40,
+        "post_both_known": 39,
+        "post_alert_chosen": 0,
+        "post_wait_chosen": 40,
+        "terminal_no_alert": 0
+      },
+      "validation_curve": [
+        {
+          "step": 100,
+          "score": -0.49365927286816175,
+          "mcc": -0.42365927286816174,
+          "fpr": 0.7
+        },
+        {
+          "step": 180,
+          "score": -0.1,
+          "mcc": 0.0,
+          "fpr": 1.0
+        }
+      ],
+      "permutation_map_present": null
+    },
+    {
+      "seed": 42,
+      "variant": "no_protocol",
+      "selected_step": 180,
+      "policy_entries": 130,
+      "validation_metrics": {
+        "mcc": 0.20869967789998037,
+        "bal_acc": 0.6166666666666667,
+        "f1": 0.5777777777777777,
+        "recall": 0.43333333333333335,
+        "fpr": 0.2,
+        "premature_rate": 0.0,
+        "tp": 13,
+        "tn": 8,
+        "fp": 2,
+        "fn": 17,
+        "delay_messages": 3.6153846153846154,
+        "inspections": 0.975,
+        "mean_reward": -6.8512499999999985
+      },
+      "action_counts": {
+        "wait": 780,
+        "inspect": 39,
+        "alert": 15,
+        "pre_known": 794,
+        "pre_total": 795,
+        "post_known": 24,
+        "post_total": 39,
+        "post_both_known": 11,
+        "post_alert_chosen": 11,
+        "post_wait_chosen": 28,
+        "terminal_no_alert": 25
+      },
+      "validation_curve": [
+        {
+          "step": 100,
+          "score": -0.49365927286816175,
+          "mcc": -0.42365927286816174,
+          "fpr": 0.7
+        },
+        {
+          "step": 180,
+          "score": 0.18869967789998038,
+          "mcc": 0.20869967789998037,
+          "fpr": 0.2
+        }
+      ],
+      "permutation_map_present": null
+    },
+    {
+      "seed": 42,
+      "variant": "permuted_q",
+      "selected_step": 100,
+      "policy_entries": 70,
+      "validation_metrics": {
+        "mcc": 0.28867513459481287,
+        "bal_acc": 0.6333333333333333,
+        "f1": 0.8387096774193549,
+        "recall": 0.8666666666666667,
+        "fpr": 0.6,
+        "premature_rate": 0.0,
+        "tp": 26,
+        "tn": 4,
+        "fp": 6,
+        "fn": 4,
+        "delay_messages": 4.269230769230769,
+        "inspections": 0.65,
+        "mean_reward": 2.7467500000000014
+      },
+      "action_counts": {
+        "wait": 589,
+        "inspect": 26,
+        "alert": 32,
+        "pre_known": 530,
+        "pre_total": 621,
+        "post_known": 6,
+        "post_total": 26,
+        "post_both_known": 6,
+        "post_alert_chosen": 0,
+        "post_wait_chosen": 26,
+        "terminal_no_alert": 8
+      },
+      "validation_curve": [
+        {
+          "step": 100,
+          "score": 0.22867513459481287,
+          "mcc": 0.28867513459481287,
+          "fpr": 0.6
+        },
+        {
+          "step": 180,
+          "score": -0.08919785812368919,
+          "mcc": -0.029197858123689188,
+          "fpr": 0.6
+        }
+      ],
+      "permutation_map_present": true
+    }
+  ],
+  "warnings": [
+    "42/central: post-inspection Q coverage below 50%",
+    "42/central: validation FPR above 50%",
+    "42/four_q: post-inspection Q coverage below 50%",
+    "42/four_q: validation FPR above 50%",
+    "42/no_phy: validation FPR above 50%",
+    "42/permuted_q: post-inspection Q coverage below 50%",
+    "42/permuted_q: validation FPR above 50%"
+  ],
+  "summary": {
+    "central": {
+      "mcc_mean": -0.03456505649101418,
+      "mcc_std": null
+    },
+    "four_q": {
+      "mcc_mean": 0.037986858819879316,
+      "mcc_std": null
+    },
+    "no_phy": {
+      "mcc_mean": 0.0,
+      "mcc_std": null
+    },
+    "no_protocol": {
+      "mcc_mean": 0.20869967789998037,
+      "mcc_std": null
+    },
+    "permuted_q": {
+      "mcc_mean": 0.28867513459481287,
+      "mcc_std": null
+    }
+  }
+}

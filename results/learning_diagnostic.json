@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "purpose": "diagnostic only, NOT confirmatory",
+  "test_sha256": "cd53f9509a5baadbb3be2552664aa3d9f4f2b5642cb437b2f526f317b7d8941f",
+  "models": {
+    "central": {
+      "episodes": 175,
+      "decision_steps": 2769,
+      "action_counts": {
+        "0": 2449,
+        "1": 168,
+        "2": 152
+      },
+      "inspection_fraction": 0.96,
+      "all_unseen_fraction": 0.11664860960635609,
+      "all_unseen_after_inspection_fraction": 1.0,
+      "post_inspection_steps": 168,
+      "ties_fraction": 0.11664860960635609,
+      "median_q_margin": 0.07443747621587658,
+      "unique_visited_states": 42,
+      "policy_entries": 106
+    },
+    "four_q": {
+      "episodes": 175,
+      "decision_steps": 2769,
+      "action_counts": {
+        "0": 2449,
+        "1": 168,
+        "2": 152
+      },
+      "inspection_fraction": 0.96,
+      "all_unseen_fraction": 0.11664860960635609,
+      "all_unseen_after_inspection_fraction": 1.0,
+      "post_inspection_steps": 168,
+      "ties_fraction": 0.11664860960635609,
+      "median_q_margin": 0.07443747621587658,
+      "unique_visited_states": 37,
+      "policy_entries": 102,
+      "post_inspection_zero_signal_counterfactual": {
+        "radio": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        },
+        "temporal": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        },
+        "phy": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        },
+        "protocol": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        }
+      }
+    },
+    "no_phy": {
+      "episodes": 175,
+      "decision_steps": 2769,
+      "action_counts": {
+        "0": 2449,
+        "1": 168,
+        "2": 152
+      },
+      "inspection_fraction": 0.96,
+      "all_unseen_fraction": 0.11664860960635609,
+      "all_unseen_after_inspection_fraction": 1.0,
+      "post_inspection_steps": 168,
+      "ties_fraction": 0.11664860960635609,
+      "median_q_margin": 0.07443747621587658,
+      "unique_visited_states": 37,
+      "policy_entries": 99,
+      "post_inspection_zero_signal_counterfactual": {
+        "radio": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        },
+        "temporal": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        },
+        "protocol": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        }
+      }
+    },
+    "no_protocol": {
+      "episodes": 175,
+      "decision_steps": 2769,
+      "action_counts": {
+        "0": 2449,
+        "1": 168,
+        "2": 152
+      },
+      "inspection_fraction": 0.96,
+      "all_unseen_fraction": 0.11664860960635609,
+      "all_unseen_after_inspection_fraction": 1.0,
+      "post_inspection_steps": 168,
+      "ties_fraction": 0.11664860960635609,
+      "median_q_margin": 0.07443747621587658,
+      "unique_visited_states": 35,
+      "policy_entries": 102,
+      "post_inspection_zero_signal_counterfactual": {
+        "radio": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        },
+        "temporal": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        },
+        "phy": {
+          "episodes_changed": 0,
+          "fraction_changed": 0.0
+        }
+      }
+    },
+    "permuted_q": {
+      "checkpoint_entries": 104,
+      "permutation_map_persisted": false
+    }
+  },
+  "comparisons": {
+    "central__central": {
+      "identical_final_decisions": true,
+      "different_predictions": 0,
+      "different_timing": 0
+    },
+    "central__four_q": {
+      "identical_final_decisions": true,
+      "different_predictions": 0,
+      "different_timing": 0
+    },
+    "central__no_phy": {
+      "identical_final_decisions": true,
+      "different_predictions": 0,
+      "different_timing": 0
+    },
+    "central__no_protocol": {
+      "identical_final_decisions": true,
+      "different_predictions": 0,
+      "different_timing": 0
+    }
+  },
+  "warnings": [
+    "permuted_q legacy map missing: skip full evaluation, report structural checkpoint statistics only",
+    "All variants use the same pre-inspection state; specialist Q signals enter only after an inspection. This can mask cooperative differences.",
+    "Unknown Q(state,action) entries default to 0 and ties prefer wait (action 0); quantify this before interpreting equivalence."
+  ]
+}

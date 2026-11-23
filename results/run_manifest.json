@@ -1,0 +1,12 @@
+{
+  "mode": "smoke",
+  "confirmatory": false,
+  "seeds": 1,
+  "steps": 30,
+  "elapsed_seconds": 3.220894907000911,
+  "python": "3.13.5",
+  "files_sha256": {
+    "test.csv.gz": "cd53f9509a5baadbb3be2552664aa3d9f4f2b5642cb437b2f526f317b7d8941f",
+    "train.csv.gz": "256821a6bb5186ee3d8c8da10d3c208c5d599ca08f644ae9ea3aee0314f4bfa5"
+  }
+}

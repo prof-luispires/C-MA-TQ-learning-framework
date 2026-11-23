@@ -1,0 +1,507 @@
+{
+  "status": "PASS",
+  "purpose": "development-only structural ablation, no test evaluation",
+  "seed_list": [
+    42
+  ],
+  "local_steps": 100,
+  "coordinator_steps": 180,
+  "train_sha256": "256821a6bb5186ee3d8c8da10d3c208c5d599ca08f644ae9ea3aee0314f4bfa5",
+  "conditions": {
+    "baseline": "R72 semantics: post-inspection wait resets flag; unseen Q=0",
+    "persist_inspection": "inspection state persists; unseen Q=0",
+    "persist_known_first": "persistent inspection; prefer learned Q actions, fallback wait"
+  },
+  "results": [
+    {
+      "seed": 42,
+      "variant": "central",
+      "condition": "baseline",
+      "selected_step": 180,
+      "policy_entries": 238,
+      "stats": {
+        "decisions": 744,
+        "unseen_selected": 64,
+        "post_total": 24,
+        "post_known": 4,
+        "reset_after_inspection_wait": 20,
+        "actions_0": 689,
+        "actions_1": 24,
+        "actions_2": 31
+      },
+      "metrics": {
+        "mcc": -0.03456505649101418,
+        "bal_acc": 0.4833333333333334,
+        "f1": 0.7540983606557377,
+        "recall": 0.7666666666666667,
+        "fpr": 0.8,
+        "premature_rate": 0.0,
+        "tp": 23,
+        "tn": 2,
+        "fp": 8,
+        "fn": 7,
+        "delay_messages": 6.826086956521739,
+        "inspections": 0.6,
+        "mean_reward": -3.0137500000000004
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "central",
+      "condition": "persist_inspection",
+      "selected_step": 180,
+      "policy_entries": 314,
+      "stats": {
+        "decisions": 564,
+        "unseen_selected": 112,
+        "post_total": 112,
+        "post_known": 47,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 501,
+        "actions_1": 27,
+        "actions_2": 36
+      },
+      "metrics": {
+        "mcc": -0.2182178902359924,
+        "bal_acc": 0.4166666666666667,
+        "f1": 0.7692307692307693,
+        "recall": 0.8333333333333334,
+        "fpr": 1.0,
+        "premature_rate": 0.03333333333333333,
+        "tp": 25,
+        "tn": 0,
+        "fp": 10,
+        "fn": 5,
+        "delay_messages": 3.92,
+        "inspections": 0.675,
+        "mean_reward": -2.3414999999999995
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "central",
+      "condition": "persist_known_first",
+      "selected_step": 180,
+      "policy_entries": 279,
+      "stats": {
+        "decisions": 746,
+        "unseen_selected": 123,
+        "post_total": 523,
+        "post_known": 404,
+        "reset_after_inspection_wait": 0,
+        "actions_1": 39,
+        "actions_0": 687,
+        "actions_2": 20
+      },
+      "metrics": {
+        "mcc": 0.029197858123689188,
+        "bal_acc": 0.5166666666666666,
+        "f1": 0.5531914893617021,
+        "recall": 0.43333333333333335,
+        "fpr": 0.4,
+        "premature_rate": 0.1,
+        "tp": 13,
+        "tn": 6,
+        "fp": 4,
+        "fn": 17,
+        "delay_messages": 3.3846153846153846,
+        "inspections": 0.975,
+        "mean_reward": -9.299000000000001
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "four_q",
+      "condition": "baseline",
+      "selected_step": 180,
+      "policy_entries": 128,
+      "stats": {
+        "decisions": 651,
+        "unseen_selected": 33,
+        "post_total": 33,
+        "post_known": 10,
+        "reset_after_inspection_wait": 25,
+        "actions_0": 585,
+        "actions_1": 33,
+        "actions_2": 33
+      },
+      "metrics": {
+        "mcc": 0.037986858819879316,
+        "bal_acc": 0.5166666666666667,
+        "f1": 0.7936507936507936,
+        "recall": 0.8333333333333334,
+        "fpr": 0.8,
+        "premature_rate": 0.0,
+        "tp": 25,
+        "tn": 2,
+        "fp": 8,
+        "fn": 5,
+        "delay_messages": 4.28,
+        "inspections": 0.825,
+        "mean_reward": -0.45224999999999954
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "four_q",
+      "condition": "persist_inspection",
+      "selected_step": 180,
+      "policy_entries": 176,
+      "stats": {
+        "decisions": 662,
+        "unseen_selected": 101,
+        "post_total": 0,
+        "post_known": 0,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 631,
+        "actions_2": 31
+      },
+      "metrics": {
+        "mcc": -0.17282528245507087,
+        "bal_acc": 0.41666666666666663,
+        "f1": 0.7213114754098361,
+        "recall": 0.7333333333333333,
+        "fpr": 0.9,
+        "premature_rate": 0.0,
+        "tp": 22,
+        "tn": 1,
+        "fp": 9,
+        "fn": 8,
+        "delay_messages": 5.5,
+        "inspections": 0.0,
+        "mean_reward": -4.177749999999999
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "four_q",
+      "condition": "persist_known_first",
+      "selected_step": 100,
+      "policy_entries": 83,
+      "stats": {
+        "decisions": 763,
+        "unseen_selected": 140,
+        "post_total": 379,
+        "post_known": 283,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 705,
+        "actions_1": 38,
+        "actions_2": 20
+      },
+      "metrics": {
+        "mcc": -0.11547005383792516,
+        "bal_acc": 0.43333333333333335,
+        "f1": 0.56,
+        "recall": 0.4666666666666667,
+        "fpr": 0.6,
+        "premature_rate": 0.0,
+        "tp": 14,
+        "tn": 4,
+        "fp": 6,
+        "fn": 16,
+        "delay_messages": 2.7857142857142856,
+        "inspections": 0.95,
+        "mean_reward": -9.67125
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "no_phy",
+      "condition": "baseline",
+      "selected_step": 180,
+      "policy_entries": 108,
+      "stats": {
+        "decisions": 735,
+        "unseen_selected": 5,
+        "post_total": 40,
+        "post_known": 39,
+        "reset_after_inspection_wait": 40,
+        "actions_0": 655,
+        "actions_1": 40,
+        "actions_2": 40
+      },
+      "metrics": {
+        "mcc": 0.0,
+        "bal_acc": 0.5,
+        "f1": 0.8571428571428571,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "premature_rate": 0.0,
+        "tp": 30,
+        "tn": 0,
+        "fp": 10,
+        "fn": 0,
+        "delay_messages": 7.733333333333333,
+        "inspections": 1.0,
+        "mean_reward": 1.359999999999999
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "no_phy",
+      "condition": "persist_inspection",
+      "selected_step": 180,
+      "policy_entries": 109,
+      "stats": {
+        "decisions": 814,
+        "unseen_selected": 12,
+        "post_total": 518,
+        "post_known": 512,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 762,
+        "actions_1": 38,
+        "actions_2": 14
+      },
+      "metrics": {
+        "mcc": 0.25197631533948484,
+        "bal_acc": 0.6333333333333333,
+        "f1": 0.5238095238095238,
+        "recall": 0.36666666666666664,
+        "fpr": 0.1,
+        "premature_rate": 0.06666666666666667,
+        "tp": 11,
+        "tn": 9,
+        "fp": 1,
+        "fn": 19,
+        "delay_messages": 2.0,
+        "inspections": 0.95,
+        "mean_reward": -8.0495
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "no_phy",
+      "condition": "persist_known_first",
+      "selected_step": 180,
+      "policy_entries": 87,
+      "stats": {
+        "decisions": 778,
+        "unseen_selected": 3,
+        "post_total": 623,
+        "post_known": 621,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 720,
+        "actions_1": 40,
+        "actions_2": 18
+      },
+      "metrics": {
+        "mcc": 0.058025885318565944,
+        "bal_acc": 0.5333333333333333,
+        "f1": 0.5833333333333334,
+        "recall": 0.4666666666666667,
+        "fpr": 0.4,
+        "premature_rate": 0.0,
+        "tp": 14,
+        "tn": 6,
+        "fp": 4,
+        "fn": 16,
+        "delay_messages": 2.0,
+        "inspections": 1.0,
+        "mean_reward": -7.591000000000001
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "no_protocol",
+      "condition": "baseline",
+      "selected_step": 180,
+      "policy_entries": 130,
+      "stats": {
+        "decisions": 834,
+        "unseen_selected": 28,
+        "post_total": 39,
+        "post_known": 24,
+        "reset_after_inspection_wait": 28,
+        "actions_0": 780,
+        "actions_1": 39,
+        "actions_2": 15
+      },
+      "metrics": {
+        "mcc": 0.20869967789998037,
+        "bal_acc": 0.6166666666666667,
+        "f1": 0.5777777777777777,
+        "recall": 0.43333333333333335,
+        "fpr": 0.2,
+        "premature_rate": 0.0,
+        "tp": 13,
+        "tn": 8,
+        "fp": 2,
+        "fn": 17,
+        "delay_messages": 3.6153846153846154,
+        "inspections": 0.975,
+        "mean_reward": -6.8512499999999985
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "no_protocol",
+      "condition": "persist_inspection",
+      "selected_step": 180,
+      "policy_entries": 174,
+      "stats": {
+        "decisions": 718,
+        "unseen_selected": 82,
+        "post_total": 137,
+        "post_known": 133,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 680,
+        "actions_1": 13,
+        "actions_2": 25
+      },
+      "metrics": {
+        "mcc": 0.029814239699997195,
+        "bal_acc": 0.5166666666666666,
+        "f1": 0.6909090909090909,
+        "recall": 0.6333333333333333,
+        "fpr": 0.6,
+        "premature_rate": 0.0,
+        "tp": 19,
+        "tn": 4,
+        "fp": 6,
+        "fn": 11,
+        "delay_messages": 4.7894736842105265,
+        "inspections": 0.325,
+        "mean_reward": -4.336249999999999
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "no_protocol",
+      "condition": "persist_known_first",
+      "selected_step": 180,
+      "policy_entries": 106,
+      "stats": {
+        "decisions": 690,
+        "unseen_selected": 68,
+        "post_total": 276,
+        "post_known": 263,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 627,
+        "actions_1": 36,
+        "actions_2": 27
+      },
+      "metrics": {
+        "mcc": -0.20869967789998037,
+        "bal_acc": 0.3833333333333333,
+        "f1": 0.6181818181818182,
+        "recall": 0.5666666666666667,
+        "fpr": 0.8,
+        "premature_rate": 0.06666666666666667,
+        "tp": 17,
+        "tn": 2,
+        "fp": 8,
+        "fn": 13,
+        "delay_messages": 4.176470588235294,
+        "inspections": 0.9,
+        "mean_reward": -9.06925
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "permuted_q",
+      "condition": "baseline",
+      "selected_step": 100,
+      "policy_entries": 70,
+      "stats": {
+        "decisions": 647,
+        "unseen_selected": 132,
+        "post_total": 26,
+        "post_known": 6,
+        "reset_after_inspection_wait": 26,
+        "actions_0": 589,
+        "actions_2": 32,
+        "actions_1": 26
+      },
+      "metrics": {
+        "mcc": 0.28867513459481287,
+        "bal_acc": 0.6333333333333333,
+        "f1": 0.8387096774193549,
+        "recall": 0.8666666666666667,
+        "fpr": 0.6,
+        "premature_rate": 0.0,
+        "tp": 26,
+        "tn": 4,
+        "fp": 6,
+        "fn": 4,
+        "delay_messages": 4.269230769230769,
+        "inspections": 0.65,
+        "mean_reward": 2.7467500000000014
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "permuted_q",
+      "condition": "persist_inspection",
+      "selected_step": 180,
+      "policy_entries": 212,
+      "stats": {
+        "decisions": 585,
+        "unseen_selected": 49,
+        "post_total": 78,
+        "post_known": 60,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 521,
+        "actions_2": 39,
+        "actions_1": 25
+      },
+      "metrics": {
+        "mcc": -0.13245323570650439,
+        "bal_acc": 0.4666666666666667,
+        "f1": 0.8235294117647058,
+        "recall": 0.9333333333333333,
+        "fpr": 1.0,
+        "premature_rate": 0.03333333333333333,
+        "tp": 28,
+        "tn": 0,
+        "fp": 10,
+        "fn": 2,
+        "delay_messages": 5.107142857142857,
+        "inspections": 0.625,
+        "mean_reward": 0.40875000000000056
+      }
+    },
+    {
+      "seed": 42,
+      "variant": "permuted_q",
+      "condition": "persist_known_first",
+      "selected_step": 180,
+      "policy_entries": 149,
+      "stats": {
+        "decisions": 708,
+        "unseen_selected": 40,
+        "post_total": 345,
+        "post_known": 329,
+        "reset_after_inspection_wait": 0,
+        "actions_0": 645,
+        "actions_1": 38,
+        "actions_2": 25
+      },
+      "metrics": {
+        "mcc": -0.23570226039551584,
+        "bal_acc": 0.3666666666666667,
+        "f1": 0.5925925925925926,
+        "recall": 0.5333333333333333,
+        "fpr": 0.8,
+        "premature_rate": 0.03333333333333333,
+        "tp": 16,
+        "tn": 2,
+        "fp": 8,
+        "fn": 14,
+        "delay_messages": 3.5625,
+        "inspections": 0.95,
+        "mean_reward": -9.86875
+      }
+    }
+  ],
+  "tests_passed": 363,
+  "tests_total": 363,
+  "tests_failed": [],
+  "limitations": [
+    "Same development dataset previously explored; not confirmatory",
+    "Known-first is an experimental rule, not proven optimal",
+    "Central and multi variants not capacity matched",
+    "Only first three training episodes per configuration are traced in detail",
+    "Training-time TD logs are authentic for the instrumented training, not historical R74 checkpoints",
+    "No external labeled attacks included"
+  ]
+}

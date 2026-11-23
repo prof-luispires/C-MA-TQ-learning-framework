@@ -1,0 +1,44 @@
+{
+  "phase": "E3-R82",
+  "status": "PROVISIONAL_FREEZE",
+  "decision": "freeze candidate only; independent evaluation blocked until external data",
+  "selected_architectures": [
+    "four_q",
+    "no_phy"
+  ],
+  "comparators": [
+    "central",
+    "no_protocol",
+    "no_radio",
+    "no_temporal"
+  ],
+  "seeds_development": [
+    42,
+    123,
+    2026,
+    31415,
+    27182
+  ],
+  "local_steps": 600,
+  "coordinator_steps": 1000,
+  "condition": "persist_inspection",
+  "checkpoint": "final_fixed",
+  "metrics": [
+    "MCC",
+    "recall",
+    "FPR",
+    "precision",
+    "F1",
+    "balanced_accuracy",
+    "training_time",
+    "inference_latency",
+    "Q_entries"
+  ],
+  "evaluation": "development_only",
+  "prohibitions": [
+    "Do not use historical test.csv.gz as pristine holdout",
+    "Do not select models on confirmatory data",
+    "Do not claim matched capacity based on Q occupancy",
+    "Do not claim independent validation without new labeled data"
+  ]
+}

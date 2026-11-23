@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "R82 clean engine isolated pilot; not a frozen confirmatory experiment",
+  "train_file_sha256": "256821a6bb5186ee3d8c8da10d3c208c5d599ca08f644ae9ea3aee0314f4bfa5",
+  "clean_engine_sha256": "f29cdf20fc9375331dd904af0a47b9748fbdef17973a94ff844e9edf7ff95169",
+  "train_unique_episode_ids": 140,
+  "validation_unique_episode_ids": 35,
+  "train_validation_id_overlap": 0,
+  "historical_test_loaded": false,
+  "calibration_partition": "training_only",
+  "local_pilot_steps_per_specialist": 20,
+  "calibration": {
+    "radio": [
+      0.0,
+      1.0
+    ],
+    "temporal": [
+      0.0,
+      1.0
+    ],
+    "phy": [
+      0.0,
+      1.0
+    ],
+    "protocol": [
+      0.0,
+      21.090033136008955
+    ]
+  },
+  "limitations": [
+    "Existing R81 and earlier scripts retain legacy behavior and are not confirmatory",
+    "Training/validation partitions from historically explored data; validation not independent",
+    "No external labeled independent evaluation data provided",
+    "Capacity and wall-clock budgets not yet matched",
+    "No R83 large-scale campaign performed"
+  ]
+}

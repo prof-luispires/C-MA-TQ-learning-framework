@@ -1,0 +1,180 @@
+{
+  "status": "PASS",
+  "purpose": "development diagnostic, NOT independent validation",
+  "datasets": {
+    "train": {
+      "sha256": "256821a6bb5186ee3d8c8da10d3c208c5d599ca08f644ae9ea3aee0314f4bfa5",
+      "rows": 4200,
+      "episodes": 175,
+      "scenario_counts": {
+        "counter_replay": 25,
+        "multidomain": 25,
+        "normal": 25,
+        "phy_shift": 25,
+        "radio_drift": 25,
+        "slow_drift": 25,
+        "temporal_burst": 25
+      },
+      "duplicate_episode_t": 0,
+      "inconsistent_episode_metadata": 0,
+      "min_episode_length": 24,
+      "max_episode_length": 24
+    },
+    "test": {
+      "sha256": "cd53f9509a5baadbb3be2552664aa3d9f4f2b5642cb437b2f526f317b7d8941f",
+      "rows": 4200,
+      "episodes": 175,
+      "scenario_counts": {
+        "counter_replay": 25,
+        "multidomain": 25,
+        "normal": 25,
+        "phy_shift": 25,
+        "radio_drift": 25,
+        "slow_drift": 25,
+        "temporal_burst": 25
+      },
+      "duplicate_episode_t": 0,
+      "inconsistent_episode_metadata": 0,
+      "min_episode_length": 24,
+      "max_episode_length": 24
+    }
+  },
+  "policies": {
+    "central": {
+      "checkpoint_sha256": "c70eb7a0a58d6965b6bb7f1afc05ab105f01102197ad6104864f04cda57ff71c",
+      "q_state_action_entries": 106,
+      "q_action_entry_counts": {
+        "1": 18,
+        "0": 63,
+        "2": 25
+      },
+      "local_policy_entries": {
+        "radio": 87,
+        "temporal": 44,
+        "phy": 81,
+        "protocol": 10
+      },
+      "permutation_map_persisted": false
+    },
+    "four_q": {
+      "checkpoint_sha256": "edcac34a22bca012977614af7d2aa56f9810c9e7401f229c0d2c697f086995f7",
+      "q_state_action_entries": 102,
+      "q_action_entry_counts": {
+        "1": 18,
+        "0": 59,
+        "2": 25
+      },
+      "local_policy_entries": {
+        "radio": 87,
+        "temporal": 44,
+        "phy": 81,
+        "protocol": 10
+      },
+      "permutation_map_persisted": false
+    },
+    "no_phy": {
+      "checkpoint_sha256": "cd3e9d56778547651b4a2ce423e36fd9cfa76378196b26e33890910d41e6a62b",
+      "q_state_action_entries": 99,
+      "q_action_entry_counts": {
+        "1": 18,
+        "0": 56,
+        "2": 25
+      },
+      "local_policy_entries": {
+        "radio": 87,
+        "temporal": 44,
+        "phy": 81,
+        "protocol": 10
+      },
+      "permutation_map_persisted": false
+    },
+    "no_protocol": {
+      "checkpoint_sha256": "0faf2c4a2a3be43ecdf9564f20033e74b8c8376b99859e268cea4a1937587587",
+      "q_state_action_entries": 102,
+      "q_action_entry_counts": {
+        "1": 18,
+        "0": 59,
+        "2": 25
+      },
+      "local_policy_entries": {
+        "radio": 87,
+        "temporal": 44,
+        "phy": 81,
+        "protocol": 10
+      },
+      "permutation_map_persisted": false
+    },
+    "permuted_q": {
+      "checkpoint_sha256": "9bb2e08ca8502f8c676b0ec7b9c36c286b7b17654260cc56a87aaee99172fe74",
+      "q_state_action_entries": 104,
+      "q_action_entry_counts": {
+        "1": 18,
+        "0": 61,
+        "2": 25
+      },
+      "local_policy_entries": {
+        "radio": 87,
+        "temporal": 44,
+        "phy": 81,
+        "protocol": 10
+      },
+      "permutation_map_persisted": false
+    }
+  },
+  "comparisons": {
+    "seed42:central__four_q": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:central__no_phy": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:central__no_protocol": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:central__permuted_q": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:four_q__no_phy": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:four_q__no_protocol": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:four_q__permuted_q": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:no_phy__no_protocol": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:no_phy__permuted_q": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    },
+    "seed42:no_protocol__permuted_q": {
+      "shared_episodes": 200,
+      "prediction_agreement": 1.0,
+      "full_decision_agreement": 1.0
+    }
+  },
+  "warnings": [
+    "Seed 42: central and four_q produce identical decisions; investigate learning and action distributions",
+    "Legacy permuted_q checkpoint has no persisted map; retrain before verification"
+  ]
+}

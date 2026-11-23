@@ -1,0 +1,342 @@
+{
+  "status": "PASS",
+  "purpose": "exploratory synthetic diagnostic; NOT independent validation",
+  "dataset_sha256": "cd53f9509a5baadbb3be2552664aa3d9f4f2b5642cb437b2f526f317b7d8941f",
+  "episodes": 200,
+  "models": {
+    "central": {
+      "decision_steps": 4294,
+      "post_inspection_steps": 128,
+      "post_inspection_any_learned": 32,
+      "post_inspection_all_actions_learned": 32,
+      "post_inspection_unseen_all": 96,
+      "action_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      },
+      "checkpoint_present": true,
+      "permutation_map_persisted": false,
+      "unique_post_states": 7,
+      "base_metrics": {
+        "mcc": 0.282842712474619,
+        "bal_acc": 0.6599999999999999,
+        "f1": 0.6260869565217392,
+        "recall": 0.48,
+        "fpr": 0.16,
+        "premature_rate": 0.0,
+        "tp": 72,
+        "tn": 42,
+        "fp": 8,
+        "fn": 78,
+        "delay_messages": 6.847222222222222,
+        "inspections": 0.64,
+        "mean_reward": -5.231150000000001
+      },
+      "counterfactuals": {}
+    },
+    "four_q": {
+      "decision_steps": 4294,
+      "post_inspection_steps": 128,
+      "post_inspection_any_learned": 40,
+      "post_inspection_all_actions_learned": 40,
+      "post_inspection_unseen_all": 88,
+      "action_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      },
+      "checkpoint_present": true,
+      "permutation_map_persisted": false,
+      "unique_post_states": 6,
+      "base_metrics": {
+        "mcc": 0.282842712474619,
+        "bal_acc": 0.6599999999999999,
+        "f1": 0.6260869565217392,
+        "recall": 0.48,
+        "fpr": 0.16,
+        "premature_rate": 0.0,
+        "tp": 72,
+        "tn": 42,
+        "fp": 8,
+        "fn": 78,
+        "delay_messages": 6.847222222222222,
+        "inspections": 0.64,
+        "mean_reward": -5.231150000000001
+      },
+      "counterfactuals": {
+        "radio_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "radio_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "temporal_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "temporal_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "phy_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "phy_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "protocol_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "protocol_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        }
+      }
+    },
+    "no_phy": {
+      "decision_steps": 4294,
+      "post_inspection_steps": 128,
+      "post_inspection_any_learned": 40,
+      "post_inspection_all_actions_learned": 40,
+      "post_inspection_unseen_all": 88,
+      "action_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      },
+      "checkpoint_present": true,
+      "permutation_map_persisted": false,
+      "unique_post_states": 5,
+      "base_metrics": {
+        "mcc": 0.282842712474619,
+        "bal_acc": 0.6599999999999999,
+        "f1": 0.6260869565217392,
+        "recall": 0.48,
+        "fpr": 0.16,
+        "premature_rate": 0.0,
+        "tp": 72,
+        "tn": 42,
+        "fp": 8,
+        "fn": 78,
+        "delay_messages": 6.847222222222222,
+        "inspections": 0.64,
+        "mean_reward": -5.231150000000001
+      },
+      "counterfactuals": {
+        "radio_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "radio_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "temporal_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "temporal_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "protocol_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "protocol_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        }
+      }
+    },
+    "no_protocol": {
+      "decision_steps": 4294,
+      "post_inspection_steps": 128,
+      "post_inspection_any_learned": 40,
+      "post_inspection_all_actions_learned": 40,
+      "post_inspection_unseen_all": 88,
+      "action_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      },
+      "checkpoint_present": true,
+      "permutation_map_persisted": false,
+      "unique_post_states": 6,
+      "base_metrics": {
+        "mcc": 0.282842712474619,
+        "bal_acc": 0.6599999999999999,
+        "f1": 0.6260869565217392,
+        "recall": 0.48,
+        "fpr": 0.16,
+        "premature_rate": 0.0,
+        "tp": 72,
+        "tn": 42,
+        "fp": 8,
+        "fn": 78,
+        "delay_messages": 6.847222222222222,
+        "inspections": 0.64,
+        "mean_reward": -5.231150000000001
+      },
+      "counterfactuals": {
+        "radio_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "radio_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "temporal_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "temporal_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "phy_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "phy_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        }
+      }
+    },
+    "permuted_q": {
+      "decision_steps": 4294,
+      "post_inspection_steps": 128,
+      "post_inspection_any_learned": 2,
+      "post_inspection_all_actions_learned": 2,
+      "post_inspection_unseen_all": 126,
+      "action_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      },
+      "checkpoint_present": true,
+      "permutation_map_persisted": true,
+      "unique_post_states": 11,
+      "base_metrics": {
+        "mcc": 0.282842712474619,
+        "bal_acc": 0.6599999999999999,
+        "f1": 0.6260869565217392,
+        "recall": 0.48,
+        "fpr": 0.16,
+        "premature_rate": 0.0,
+        "tp": 72,
+        "tn": 42,
+        "fp": 8,
+        "fn": 78,
+        "delay_messages": 6.847222222222222,
+        "inspections": 0.64,
+        "mean_reward": -5.231150000000001
+      },
+      "counterfactuals": {
+        "radio_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "radio_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "temporal_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "temporal_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "phy_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "phy_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "protocol_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        },
+        "protocol_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0,
+          "mcc": 0.282842712474619,
+          "fpr": 0.16
+        }
+      }
+    }
+  },
+  "comparisons": {},
+  "warnings": [
+    "four_q: tested post-inspection signal interventions did not alter decisions",
+    "no_phy: tested post-inspection signal interventions did not alter decisions",
+    "no_protocol: tested post-inspection signal interventions did not alter decisions",
+    "permuted_q: tested post-inspection signal interventions did not alter decisions"
+  ]
+}

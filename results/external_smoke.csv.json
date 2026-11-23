@@ -1,0 +1,22 @@
+{
+  "source": "/tmp/r66_smoke_external.csv",
+  "checkpoint": "models/four_q_seed42.pkl",
+  "confirmatory": false,
+  "warning": "Dataset provenance, labels and non-overlap must be independently verified",
+  "seconds": 0.012032077000185382,
+  "metrics": {
+    "n": 175,
+    "tp": 128,
+    "tn": 7,
+    "fp": 18,
+    "fn": 22,
+    "premature": 6,
+    "mcc": 0.125481281000767,
+    "balanced_accuracy": 0.5666666666666667,
+    "f1": 0.8648648648648649,
+    "recall": 0.8533333333333334,
+    "fpr": 0.72,
+    "delay_messages": 4.78125,
+    "inspections_per_episode": 0.96
+  }
+}

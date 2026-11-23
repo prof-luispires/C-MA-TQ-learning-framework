@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "development_only_nonconfirmatory",
+  "mode": "SMOKE",
+  "dataset": "original synthetic LoRaWAN train.csv.gz only",
+  "historical_test_loaded": false,
+  "train_sha256": "256821a6bb5186ee3d8c8da10d3c208c5d599ca08f644ae9ea3aee0314f4bfa5",
+  "clean_engine_sha256": "f29cdf20fc9375331dd904af0a47b9748fbdef17973a94ff844e9edf7ff95169",
+  "script_sha256": "125851db8f78c3597a48ba76e56bf84918987bd4c2a2b317b7e855195b8bcd63",
+  "seeds": [
+    42,
+    123
+  ],
+  "architectures": [
+    "central",
+    "four_q",
+    "no_phy",
+    "no_protocol",
+    "no_radio",
+    "no_temporal"
+  ],
+  "train_unique_episode_ids": 140,
+  "validation_unique_episode_ids": 35,
+  "train_validation_overlap": 0,
+  "local_steps_per_specialist": 80,
+  "coordinator_steps": 150,
+  "configuration_count": 12,
+  "episode_count": 480,
+  "confusion_consistency": "PASS",
+  "calibration": "training_only",
+  "checkpoint": "final_fixed",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "limitations": [
+    "Validation episodes have been repeatedly explored in previous iterations; NOT an independent test",
+    "No real traffic dataset; only original synthetic LoRaWAN data",
+    "Same transition count but not equal wall-clock, state-space capacity or total effective computation",
+    "Local specialist training cost shared across variants; coordinator timing excludes local training",
+    "Ablation holds removed signal in neutral bucket, retrains coordinator, retains local specialist training",
+    "No external generalization claims"
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "status": "PASS",
+  "purpose": "exploratory structural and counterfactual diagnostic; NOT confirmatory",
+  "seed": 42,
+  "local_steps_per_agent": 100,
+  "coordinator_steps": 180,
+  "dataset_sha256": "cd53f9509a5baadbb3be2552664aa3d9f4f2b5642cb437b2f526f317b7d8941f",
+  "episodes": 200,
+  "models": {
+    "central": {
+      "selected_step": 180,
+      "policy_entries": 238,
+      "coverage": {
+        "decision_steps": 3743,
+        "post_inspection_steps": 141,
+        "post_inspection_any_learned": 4,
+        "post_inspection_unseen_all": 137,
+        "pre_inspection_any_learned": 3439,
+        "action_counts": {
+          "0": 3445,
+          "1": 141,
+          "2": 157
+        }
+      },
+      "metrics": {
+        "mcc": -0.27799851904915146,
+        "bal_acc": 0.3566666666666667,
+        "f1": 0.6644067796610169,
+        "recall": 0.6533333333333333,
+        "fpr": 0.94,
+        "premature_rate": 0.08,
+        "tp": 98,
+        "tn": 3,
+        "fp": 47,
+        "fn": 52,
+        "delay_messages": 8.653061224489797,
+        "inspections": 0.705,
+        "mean_reward": -8.6938
+      },
+      "counterfactuals": {},
+      "checkpoint_roundtrip": true,
+      "permutation_map_persisted": false
+    },
+    "four_q": {
+      "selected_step": 180,
+      "policy_entries": 128,
+      "coverage": {
+        "decision_steps": 2419,
+        "post_inspection_steps": 86,
+        "post_inspection_any_learned": 40,
+        "post_inspection_unseen_all": 46,
+        "pre_inspection_any_learned": 2333,
+        "action_counts": {
+          "0": 2145,
+          "1": 86,
+          "2": 188
+        }
+      },
+      "metrics": {
+        "mcc": -0.35276684147527876,
+        "bal_acc": 0.31333333333333335,
+        "f1": 0.6275862068965518,
+        "recall": 0.6066666666666667,
+        "fpr": 0.98,
+        "premature_rate": 0.32,
+        "tp": 91,
+        "tn": 1,
+        "fp": 49,
+        "fn": 59,
+        "delay_messages": 4.395604395604396,
+        "inspections": 0.43,
+        "mean_reward": -10.502199999999998
+      },
+      "counterfactuals": {
+        "radio_to_0": {
+          "episodes_changed": 160,
+          "predictions_changed": 12
+        },
+        "radio_to_3": {
+          "episodes_changed": 200,
+          "predictions_changed": 188
+        },
+        "temporal_to_0": {
+          "episodes_changed": 136,
+          "predictions_changed": 124
+        },
+        "temporal_to_3": {
+          "episodes_changed": 150,
+          "predictions_changed": 48
+        },
+        "phy_to_0": {
+          "episodes_changed": 51,
+          "predictions_changed": 27
+        },
+        "phy_to_3": {
+          "episodes_changed": 40,
+          "predictions_changed": 21
+        },
+        "protocol_to_0": {
+          "episodes_changed": 40,
+          "predictions_changed": 21
+        },
+        "protocol_to_3": {
+          "episodes_changed": 40,
+          "predictions_changed": 21
+        }
+      },
+      "checkpoint_roundtrip": true,
+      "permutation_map_persisted": false
+    },
+    "no_phy": {
+      "selected_step": 180,
+      "policy_entries": 108,
+      "coverage": {
+        "decision_steps": 3085,
+        "post_inspection_steps": 136,
+        "post_inspection_any_learned": 136,
+        "post_inspection_unseen_all": 0,
+        "pre_inspection_any_learned": 2948,
+        "action_counts": {
+          "0": 2749,
+          "1": 136,
+          "2": 200
+        }
+      },
+      "metrics": {
+        "mcc": -0.3244428422615251,
+        "bal_acc": 0.34,
+        "f1": 0.6754966887417219,
+        "recall": 0.68,
+        "fpr": 1.0,
+        "premature_rate": 0.32,
+        "tp": 102,
+        "tn": 0,
+        "fp": 50,
+        "fn": 48,
+        "delay_messages": 9.686274509803921,
+        "inspections": 0.68,
+        "mean_reward": -9.8726
+      },
+      "counterfactuals": {
+        "radio_to_0": {
+          "episodes_changed": 200,
+          "predictions_changed": 200
+        },
+        "radio_to_3": {
+          "episodes_changed": 200,
+          "predictions_changed": 192
+        },
+        "temporal_to_0": {
+          "episodes_changed": 136,
+          "predictions_changed": 136
+        },
+        "temporal_to_3": {
+          "episodes_changed": 200,
+          "predictions_changed": 200
+        },
+        "protocol_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0
+        },
+        "protocol_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0
+        }
+      },
+      "checkpoint_roundtrip": true,
+      "permutation_map_persisted": false
+    },
+    "no_protocol": {
+      "selected_step": 180,
+      "policy_entries": 130,
+      "coverage": {
+        "decision_steps": 2975,
+        "post_inspection_steps": 135,
+        "post_inspection_any_learned": 123,
+        "post_inspection_unseen_all": 12,
+        "pre_inspection_any_learned": 2839,
+        "action_counts": {
+          "0": 2701,
+          "1": 135,
+          "2": 139
+        }
+      },
+      "metrics": {
+        "mcc": -0.3999949591375082,
+        "bal_acc": 0.27,
+        "f1": 0.42323651452282157,
+        "recall": 0.34,
+        "fpr": 0.8,
+        "premature_rate": 0.32,
+        "tp": 51,
+        "tn": 10,
+        "fp": 40,
+        "fn": 99,
+        "delay_messages": 4.333333333333333,
+        "inspections": 0.675,
+        "mean_reward": -17.142749999999996
+      },
+      "counterfactuals": {
+        "radio_to_0": {
+          "episodes_changed": 96,
+          "predictions_changed": 37
+        },
+        "radio_to_3": {
+          "episodes_changed": 199,
+          "predictions_changed": 127
+        },
+        "temporal_to_0": {
+          "episodes_changed": 136,
+          "predictions_changed": 75
+        },
+        "temporal_to_3": {
+          "episodes_changed": 78,
+          "predictions_changed": 62
+        },
+        "phy_to_0": {
+          "episodes_changed": 33,
+          "predictions_changed": 31
+        },
+        "phy_to_3": {
+          "episodes_changed": 30,
+          "predictions_changed": 28
+        }
+      },
+      "checkpoint_roundtrip": true,
+      "permutation_map_persisted": false
+    },
+    "permuted_q": {
+      "selected_step": 100,
+      "policy_entries": 46,
+      "coverage": {
+        "decision_steps": 2906,
+        "post_inspection_steps": 61,
+        "post_inspection_any_learned": 0,
+        "post_inspection_unseen_all": 61,
+        "pre_inspection_any_learned": 2718,
+        "action_counts": {
+          "0": 2662,
+          "1": 61,
+          "2": 183
+        }
+      },
+      "metrics": {
+        "mcc": 0.031053504702226842,
+        "bal_acc": 0.51,
+        "f1": 0.8288288288288288,
+        "recall": 0.92,
+        "fpr": 0.9,
+        "premature_rate": 0.0,
+        "tp": 138,
+        "tn": 5,
+        "fp": 45,
+        "fn": 12,
+        "delay_messages": 4.3768115942028984,
+        "inspections": 0.305,
+        "mean_reward": 1.6460000000000008
+      },
+      "counterfactuals": {
+        "radio_to_0": {
+          "episodes_changed": 150,
+          "predictions_changed": 68
+        },
+        "radio_to_3": {
+          "episodes_changed": 183,
+          "predictions_changed": 183
+        },
+        "temporal_to_0": {
+          "episodes_changed": 191,
+          "predictions_changed": 183
+        },
+        "temporal_to_3": {
+          "episodes_changed": 191,
+          "predictions_changed": 183
+        },
+        "phy_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0
+        },
+        "phy_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0
+        },
+        "protocol_to_0": {
+          "episodes_changed": 0,
+          "predictions_changed": 0
+        },
+        "protocol_to_3": {
+          "episodes_changed": 0,
+          "predictions_changed": 0
+        }
+      },
+      "checkpoint_roundtrip": true,
+      "permutation_map_persisted": true
+    }
+  },
+  "warnings": []
+}

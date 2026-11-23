@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "dataset": "/mnt/data/E3_R67_framework/data/test.csv.gz",
+  "dataset_sha256": "cd53f9509a5baadbb3be2552664aa3d9f4f2b5642cb437b2f526f317b7d8941f",
+  "episodes": 175,
+  "rows": 4200,
+  "checkpoints": [
+    {
+      "variant": "central",
+      "checkpoint_sha256": "c70eb7a0a58d6965b6bb7f1afc05ab105f01102197ad6104864f04cda57ff71c",
+      "identical_after_reload": true,
+      "episodes": 175,
+      "inference_seconds": 0.004995,
+      "metrics_diagnostic": {
+        "n": 175,
+        "tp": 128,
+        "tn": 7,
+        "fp": 18,
+        "fn": 22,
+        "premature": 6,
+        "mcc": 0.125481281000767,
+        "balanced_accuracy": 0.5666666666666667,
+        "f1": 0.8648648648648649,
+        "recall": 0.8533333333333334,
+        "fpr": 0.72,
+        "delay_messages": 4.78125,
+        "inspections_per_episode": 0.96
+      }
+    },
+    {
+      "variant": "four_q",
+      "checkpoint_sha256": "edcac34a22bca012977614af7d2aa56f9810c9e7401f229c0d2c697f086995f7",
+      "identical_after_reload": true,
+      "episodes": 175,
+      "inference_seconds": 0.011167,
+      "metrics_diagnostic": {
+        "n": 175,
+        "tp": 128,
+        "tn": 7,
+        "fp": 18,
+        "fn": 22,
+        "premature": 6,
+        "mcc": 0.125481281000767,
+        "balanced_accuracy": 0.5666666666666667,
+        "f1": 0.8648648648648649,
+        "recall": 0.8533333333333334,
+        "fpr": 0.72,
+        "delay_messages": 4.78125,
+        "inspections_per_episode": 0.96
+      }
+    },
+    {
+      "variant": "no_phy",
+      "checkpoint_sha256": "cd3e9d56778547651b4a2ce423e36fd9cfa76378196b26e33890910d41e6a62b",
+      "identical_after_reload": true,
+      "episodes": 175,
+      "inference_seconds": 0.010281,
+      "metrics_diagnostic": {
+        "n": 175,
+        "tp": 128,
+        "tn": 7,
+        "fp": 18,
+        "fn": 22,
+        "premature": 6,
+        "mcc": 0.125481281000767,
+        "balanced_accuracy": 0.5666666666666667,
+        "f1": 0.8648648648648649,
+        "recall": 0.8533333333333334,
+        "fpr": 0.72,
+        "delay_messages": 4.78125,
+        "inspections_per_episode": 0.96
+      }
+    },
+    {
+      "variant": "no_protocol",
+      "checkpoint_sha256": "0faf2c4a2a3be43ecdf9564f20033e74b8c8376b99859e268cea4a1937587587",
+      "identical_after_reload": true,
+      "episodes": 175,
+      "inference_seconds": 0.009652,
+      "metrics_diagnostic": {
+        "n": 175,
+        "tp": 128,
+        "tn": 7,
+        "fp": 18,
+        "fn": 22,
+        "premature": 6,
+        "mcc": 0.125481281000767,
+        "balanced_accuracy": 0.5666666666666667,
+        "f1": 0.8648648648648649,
+        "recall": 0.8533333333333334,
+        "fpr": 0.72,
+        "delay_messages": 4.78125,
+        "inspections_per_episode": 0.96
+      }
+    }
+  ],
+  "limitations": [
+    "Data are previously explored synthetic episodes; not an independent test.",
+    "The permuted_q checkpoint cannot reproduce its original evaluation because the episode permutation map was not persisted.",
+    "The supplied Windows results.zip used 200 episodes, whereas the bundled test.csv.gz contains 175; no cross-dataset identity is claimed."
+  ]
+}

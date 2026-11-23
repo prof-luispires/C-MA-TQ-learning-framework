@@ -1,0 +1,43 @@
+{
+  "seeds": [
+    42
+  ],
+  "local_steps_per_agent": 80,
+  "coordinator_steps": 80,
+  "gamma": 0.94,
+  "alpha": 0.13,
+  "train_episodes": 160,
+  "validation_episodes": 40,
+  "test_episodes": 200,
+  "feature_groups": {
+    "radio": [
+      "rssi",
+      "snr"
+    ],
+    "temporal": [
+      "delta_t_derived"
+    ],
+    "phy": [
+      "c2",
+      "c8",
+      "c9",
+      "c15"
+    ],
+    "protocol": [
+      "counter_step_derived"
+    ]
+  },
+  "local_agent_learning": "independent tabular Q-learning TD(0) with sequential wait/alert actions",
+  "coordinator_learning": "tabular Q-learning TD(0) observe/inspect/alert",
+  "supervised_models": false,
+  "training_labels_used_in_reward": true,
+  "data": "synthetic anomalies, previously explored test campaign",
+  "confirmatory": false,
+  "temporal_metrics": "alert before onset is not TP; premature rate separately reported",
+  "permutation": "episode-wise shuffle within train validation test separately, all four Q advantages shuffled together, temporal profile preserved; coordinator retrained",
+  "equal_information": "same raw feature set available after paid inspection, but not matched capacity/state size",
+  "calibration": "unlabeled validation robust median/IQR for each specialist",
+  "inspection_budget": 1,
+  "hard_normal_controls": "bounded non-attack perturbations on normal sequences; synthetic",
+  "elapsed_seconds": 0.83
+}
